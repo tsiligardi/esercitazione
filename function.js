@@ -11,7 +11,7 @@ const getpost = (arr,id)=>{
 }
 const getcomments = (elenco)=>{
     return elenco.reduce((acc,e)=>{
-        return acc+=`<p>nome: ${e.name}<br>email: ${e.mail}<br>${e.body}`
+        return acc+=`<p>nome: ${e.name}<br>email: ${e.email}<br>${e.body}`
     },`<h1>COMMENTI</h1>`)
 }
 module.exports = {
