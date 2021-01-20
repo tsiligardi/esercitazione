@@ -8,11 +8,10 @@ app.get("/",(req,res)=>{
     fetch("https://jsonplaceholder.typicode.com/posts")
     .then(response =>response.json())
     .then(response=>res.send(utils.elpost(response)))
-
     .catch(err =>console.log(err))
 })
 
-app.get("/:id",(req,res)=>{
+app.get("/posts/:id",(req,res)=>{
     const id=req.params.id
     fetch( "https://jsonplaceholder.typicode.com/posts")
     .then(response=>response.json())
@@ -23,6 +22,7 @@ app.get("/:id",(req,res)=>{
         .then(comment=>{
             res.send(post + utils.getcomments(comment))
         })
+        .catch(err=>console.log(err))
     })
     .catch(err=>console.log(err))
 })

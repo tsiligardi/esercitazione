@@ -19,4 +19,3 @@ module.exports = {
     getpost: getpost,
     getcomments: getcomments
 }
-
